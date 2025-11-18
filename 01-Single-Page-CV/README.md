@@ -6,4 +6,3 @@ Referencia y guía del proyecto:
 
 https://roadmap.sh/projects/single-page-cv
 
-Añadido por solicitud del usuario el 18/11/2025.
