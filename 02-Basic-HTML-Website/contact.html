@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Basic HTML Website</title>
+    <meta
+      name="description"
+      content="Contact page with a simple accessible form to get in touch."
+    />
+    <meta name="keywords" content="contact, form, email" />
+    <meta name="author" content="Your Name" />
+    <link rel="canonical" href="/02-Basic-HTML-Website/contact.html" />
+  </head>
+  <body>
+    <header>
+      <div class="site-branding"><a href="index.html">your name</a></div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Contact</h1>
+      <section aria-labelledby="contact-form">
+        <h2 id="contact-form">Get in touch</h2>
+        <form action="#" method="post" novalidate>
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" />
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <div>
+            <button type="submit">Send message</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© all rights reserved 2025</p>
+    </footer>
+  </body>
+</html>
