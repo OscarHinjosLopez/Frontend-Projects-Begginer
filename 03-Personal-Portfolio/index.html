@@ -3,6 +3,85 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home — Personal Portfolio</title>
+    <meta
+      name="description"
+      content="A simple semantic HTML website — Home. Learn how to structure pages for future styling."
+    />
+    <meta
+      name="keywords"
+      content="HTML, semantic, website, homepage, projects, contact, articles"
+    />
+    <meta name="author" content="Oscar Hinjos López" />
+    <link rel="canonical" href="/03-Personal-Portfolio/index.html" />
+    <meta property="og:title" content="Home — Personal Portfolio" />
+    <meta property="og:description" content="A simple semantic HTML website — Home. Learn how to structure pages for future styling." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Core stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="site-branding">
+        <a href="index.html" aria-label="Homepage">Oscar Hinjos López</a>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article aria-labelledby="home-heading">
+        <header>
+          <h1 id="home-heading">Frontend Developer</h1>
+          <p>HTML structure with simple responsive styles — Personal Portfolio.</p>
+        </header>
+
+        <section aria-labelledby="intro">
+          <h2 id="intro">About</h2>
+          <p>Brief intro about yourself or the site. This area can be styled later.</p>
+        </section>
+
+        <section aria-labelledby="highlights">
+          <h2 id="highlights">Highlights</h2>
+          <ul>
+            <li>HTML structure and semantic tags</li>
+            <li>Multiple pages with shared navigation</li>
+            <li>Accessible contact form (on Contact page)</li>
+          </ul>
+        </section>
+      </article>
+
+      <aside aria-labelledby="side-title">
+        <h2 id="side-title">Quick Links</h2>
+        <ul>
+          <li><a href="projects.html">View projects</a></li>
+          <li><a href="articles.html">Read articles</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© all rights reserved 2025</p>
+    </footer>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home — Basic HTML Website</title>
     <meta
       name="description"
