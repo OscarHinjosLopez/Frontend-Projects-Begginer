@@ -1,0 +1,159 @@
+:root{
+  --bg:#fff;
+  --text:#111827;
+  --muted:#9aa3ad;
+
+  --date-col:180px;
+  --line-col:24px;
+  --gap:28px;
+
+  --dot-size:14px;
+  --line-width:2px;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,system-ui,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+.changelog-page{
+  max-width:1100px;
+  margin:36px auto;
+  padding:24px;
+}
+
+.changelog{
+  padding:48px;
+  border-radius:14px;
+  border:2px solid #111827;
+  background:#fff;
+}
+
+.changelog h1{
+  margin:0 0 8px;
+  text-align:center;
+  font-family:Poppins, Inter, system-ui, sans-serif;
+  font-size:2.25rem;
+}
+
+.changelog .lead{
+  text-align:center;
+  color:var(--muted);
+  margin-bottom:32px;
+  font-size:0.95rem;
+}
+
+/* ================================
+   Timeline
+   ================================ */
+
+.timeline{
+  list-style:none;
+  margin:0;
+  padding:6px 0;
+  position:relative;
+}
+
+/* ✅ VERTICAL LINE  */
+.timeline::before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left: calc(
+    var(--date-col) +
+    var(--gap) +
+    (var(--line-col) / 2)
+  );
+  width:var(--line-width);
+  background:#111827;
+  z-index:0;
+}
+
+.timeline li{
+  display:grid;
+  grid-template-columns:var(--date-col) var(--line-col) 1fr;
+  column-gap:var(--gap);
+  align-items:center;
+  padding:10px 0;
+}
+
+.timeline time{
+  color:var(--muted);
+  font-size:0.95rem;
+  padding-left:8px;
+}
+
+.timeline .dot{
+  width:var(--dot-size);
+  height:var(--dot-size);
+  border-radius:50%;
+  background:#111827;
+  justify-self:center;
+  position:relative;
+  z-index:1;
+}
+
+.timeline .content{
+  padding:6px 0;
+}
+
+/* CTA */
+.cta{
+  margin-top:28px;
+  text-align:center;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:10px;
+  background:#111827;
+  color:#fff;
+  text-decoration:none;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+
+@media (max-width:900px){
+  :root{
+    --date-col:150px;
+    --line-col:20px;
+    --gap:18px;
+  }
+}
+
+@media (max-width:620px){
+  :root{
+    --date-col:130px;
+    --line-col:18px;
+    --gap:14px;
+  }
+}
+
+@media (max-width:420px){
+  :root{
+    --date-col:0px;
+    --line-col:12px;
+    --gap:12px;
+  }
+
+  .timeline li{
+    grid-template-columns:1fr var(--line-col) 1fr;
+  }
+
+  .timeline time{
+    grid-column:1 / -1;
+    padding-bottom:6px;
+  }
+
+  .timeline::before{
+    left: calc(50% - (var(--line-width) / 2));
+  }
+}
